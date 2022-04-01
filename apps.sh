@@ -47,6 +47,9 @@ CASKS=(
   # faster spotlight
   alfred
 
+  # keyboard layout manager
+  ukelele
+
   # Other apps
   1password
   slack
