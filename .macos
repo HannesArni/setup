@@ -227,6 +227,3 @@ defaults write NSGlobalDomain AppleMetricUnits -bool true
 
 # Set the timezone
 sudo systemsetup -settimezone "GMT" > /dev/null
-
-# Stop iTunes from responding to the keyboard media keys
-launchctl unload -w /System/Library/LaunchAgents/com.apple.rcd.plist 2> /dev/null
