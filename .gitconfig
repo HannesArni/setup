@@ -1,7 +1,7 @@
 [user]
-  name = Aegir Thorsteinsson
-  email = aegir@thorsteinsson.is
-  username = thorsteinsson
+  name = Hannes Arni
+  email = hannesarni@gmail.com
+  username = HannesArni
 
 [filter "lfs"]
   required = true

@@ -44,15 +44,6 @@ export LS_COLORS='no=00:fi=00:di=01;34:ln=01;36:pi=40;33:so=01;35:do=01;35:bd=40
 alias prof="$EDITOR ~/.zshrc"
 alias reprof="source ~/.zshrc"
 
-# Git aliases
-alias gl="git pull"
-alias gp="git publish"
-alias gco="git checkout"
-
-alias grow="pipenv run grow"
-
-alias wstorm="open -a /Applications/WebStorm.app"
-
 andev() {
   adb -s "$1" reverse tcp:8081 tcp:8081
 }

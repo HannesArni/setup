@@ -15,85 +15,41 @@ brew update
 brew tap heroku/brew
 
 BREWS=(
-  # Jump to folders using a part of the name: https://github.com/wting/autojump
-  autojump
-  
-  # Alternative to `cat`: https://github.com/sharkdp/bat
-  bat
-
   # Github util
   gh
-
-  # Fuzzy finder
-  fzf
-
-  # HTTP client alternative to curl https://github.com/jkbrzt/httpie
-  httpie
-
-  # Mac App Store CLI: https://github.com/mas-cli/mas
-  mas
-
-  # Node version manager
-  fnm
 
   # File watcher from Facebook
   watchman
 
   heroku
+  docker-compose
+  python
 
   # Dependency manager for XCode
   cocoapods
 )
 brew install ${BREWS[@]}
 
-echo 'eval "$(fnm env)"' >> ~/.zprofile
-eval "$(fnm env)"
-
 CASKS=(
   # Development tools
-  visual-studio-code
   webstorm
-  gitup
+  datagrip
   docker
+  iterm2
+  postman
   android-studio
 
   # Browsers
   google-chrome
-  firefox
+
+  # faster spotlight
+  alfred
 
   # Other apps
   1password
   slack
-  tidal
-
-  # Set the brightness depending of the time of the day
-  flux
-
-  # Window manager
-  amethyst
-
-  # Your own wiki
-  notion
-
-  # Track your time
-  harvest
-
-  # Emails
-  superhuman
-
-  # Dev docs
-  dash
-
-  # Design
-  figma
-
-  java
-
-  # Kdiff 3 for code diffing
-  kdiff3
-
-  # Adobe creative cloud
-  adobe-creative-cloud
+  spotify
+  anydesk
 )
 brew install --cask ${CASKS[@]}
 
@@ -119,13 +75,6 @@ PACKAGES=(
 )
 yarn global add ${PACKAGES[@]}
 
-echo "VS Code packages…"
-CODE_EXTENSIONS=(
-  prettier
-  eslint
-)
-code --install-extension ${CODE_EXTENSIONS[@]}
-
 echo "Oh my zsh plugins…"
 # Powerlevel 10k theme
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
@@ -133,8 +82,6 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$
 git clone https://github.com/supercrabtree/k.git $ZSH_CUSTOM/plugins/k
 # Show alias for the command being run
 git clone https://github.com/djui/alias-tips.git $ZSH_CUSTOM/plugins/alias-tips
-# Jump between directories with z
-git clone https://github.com/rupa/z.git $ZSH_CUSTOM/plugins/z
 # Clear terminal when running new commands
 git clone https://github.com/Valiev/almostontop.git $ZSH_CUSTOM/plugins/almostontop
 # More completions
