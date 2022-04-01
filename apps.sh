@@ -5,7 +5,7 @@ if test ! $(which brew); then
   echo “Installing brew…”
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
   
-  echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/thor/.zprofile
+  echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/hannesarni/.zprofile
   eval "$(/opt/homebrew/bin/brew shellenv)"
   
   brew analytics off
@@ -27,6 +27,8 @@ BREWS=(
 
   # Dependency manager for XCode
   cocoapods
+
+  node
 )
 brew install ${BREWS[@]}
 
@@ -50,6 +52,9 @@ CASKS=(
   slack
   spotify
   anydesk
+
+  # Window manager
+  rectangle
 )
 brew install --cask ${CASKS[@]}
 
