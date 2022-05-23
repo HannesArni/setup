@@ -11,13 +11,10 @@ export ZSH=$HOME/.oh-my-zsh
 # Use fnm for node versions
 eval "`fnm env`"
 
-# No telemetry for yarn
-yarn config set --home enableTelemetry 0
-
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="powerlevel10k/powerlevel10k" # old one: spaceship
 
-plugins=(k z almostontop docker docker-compose node npm)
+plugins=(k z docker docker-compose node npm)
 plugins+=(zsh-completions zsh-autosuggestions zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
@@ -52,7 +49,7 @@ andev() {
 export PATH="$PATH:/usr/local/opt/ruby/bin"
 
 # Android Studio
-export ANDROID_HOME="/Users/aegir/Library/Android/sdk"
+export ANDROID_HOME="/Users/hannesarni/Library/Android/sdk"
 export PATH="$PATH:$ANDROID_HOME/tools"
 export PATH="$PATH:$ANDROID_HOME/tools/bin"
 export PATH="$PATH:$ANDROID_HOME/emulator"
